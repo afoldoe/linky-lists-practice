@@ -1,6 +1,8 @@
 //class that takes an array and makes a linked list
 class linkyList {
-	constructor(items) {
+	constructor(values) {
+		this._length = 0;
+		this.head = null;
 		let previousNode = null;
 		items.forEach((item) => {
 			let node = {value: item, next: null};
@@ -9,12 +11,20 @@ class linkyList {
 		});
 	}
 
-	append(item) {
-		if(item) let newNode = {value: item, next: null}; 
+	getNode(index, ) {
+		while
+	}
+
+	addNode(value) {
+		if(value) let node = new Node(value),
+									currentNode = this.head;
 		
-		let currentItem = null;
-		this.tail.next = newNode;
-		this.tail = newNode;
+		if(!currentNode) {
+			this.head = node;
+			this._length++;
+		}
+
+		while(currentNode.next)
 
 
 	}
