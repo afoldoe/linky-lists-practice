@@ -16,16 +16,50 @@ class linkyList {
 	}
 
 	addNode(value) {
-		if(value) let node = new Node(value),
+		if(value) let node = {value: value, next: null},
 									currentNode = this.head;
-		
-		if(!currentNode) {
+		if(!currentNode) {s
 			this.head = node;
 			this._length++;
+			return node;
 		}
 
-		while(currentNode.next)
+		while(currentNode.next) {
+			currentNode = currentNode.next;
+		}
 
+		currentNode.next = node;
+		this._length++;
+		return node;
+
+	}
+
+	findNode(index) {
+		let currentNode = this.head
+				count = 1;
+		if(this._length === 0 || this._length < index || index < 1) {
+			console.log('Error, node does not exist');
+		} 
+
+		while(count < index) {
+			count++;
+			currentNode = currentNode.next;
+		}
+		return currentNode;
+	}
+
+	deleteNode(index) {
+		let currentNode = this.head
+				count = 1;
+		if(this._length === 0 || this._length < index || index < 1) {
+			console.log('Error, node does not exist');
+		} 
+		while(count < index) {
+			count++;
+			currentNode = currentNode.next;
+		}
+
+		currentNode
 
 	}
 }
